@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Study@VC - Student Registration</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { background-color: #f8f9fa; }
+    .form-section { margin-bottom: 40px; }
+    .form-section h5 { background: #0d6efd; color: white; padding: 10px; border-radius: 5px; }
+  </style>
+</head>
+<body>
+<div class="container my-4">
+  <h2 class="text-center mb-4">Study@VC - Student Registration Form</h2>
+  <form method="POST" action="register.php" enctype="multipart/form-data" class="border p-4 bg-white shadow rounded">
+
+    <!-- Programme Section -->
+    <div class="form-section">
+      <h5>Programme Details</h5>
+      <div class="row g-3">
+        <div class="col-md-4">
+          <label>Academic Year</label>
+          <input type="text" class="form-control" name="academic_year" value="2025-26" readonly>
+        </div>
+        <div class="col-md-4">
+          <label>Programme</label>
+          <select class="form-select" name="programme">
+            <option>B.Sc. Mathematics</option>
+            <option>B.Com</option>
+            <option>BCA</option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <label>Stream</label>
+          <input type="text" class="form-control" name="stream" value="AIDED">
+        </div>
+      </div>
+    </div>
+
+    <!-- Personal Info -->
+    <div class="form-section">
+      <h5>Personal Information</h5>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <label>Applicant Name</label>
+          <input type="text" class="form-control" name="student_name" required>
+        </div>
+        <div class="col-md-3">
+          <label>Date of Birth</label>
+          <input type="date" class="form-control" name="dob" required>
+        </div>
+        <div class="col-md-3">
+          <label>Age</label>
+          <input type="number" class="form-control" name="age">
+        </div>
+        <div class="col-md-3">
+          <label>Gender</label>
+          <select class="form-select" name="gender">
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <label>Blood Group</label>
+          <input type="text" class="form-control" name="blood_group">
+        </div>
+        <div class="col-md-3">
+          <label>Mother Tongue</label>
+          <input type="text" class="form-control" name="mother_tongue">
+        </div>
+        <div class="col-md-3">
+          <label>Religion</label>
+          <input type="text" class="form-control" name="religion">
+        </div>
+        <div class="col-md-3">
+          <label>Nationality</label>
+          <input type="text" class="form-control" name="nationality">
+        </div>
+        <div class="col-md-3">
+          <label>Community</label>
+          <input type="text" class="form-control" name="community">
+        </div>
+        <div class="col-md-3">
+          <label>Caste</label>
+          <input type="text" class="form-control" name="caste">
+        </div>
+        <div class="col-md-3">
+          <label>Aadhar Number</label>
+          <input type="text" class="form-control" name="aadhar">
+        </div>
+      </div>
+    </div>
+
+    <!-- Additional Info -->
+    <div class="form-section">
+      <h5>Additional Information</h5>
+      <div class="row g-3">
+        <div class="col-md-3">
+          <label>Child of Ex-serviceman?</label>
+          <select class="form-select" name="ex_service">
+            <option>No</option><option>Yes</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <label>Differently abled?</label>
+          <select class="form-select" name="disabled">
+            <option>No</option><option>Yes</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <label>Hostel Required?</label>
+          <select class="form-select" name="hostel">
+            <option>No</option><option>Yes</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <label>Distinction in Sports?</label>
+          <select class="form-select" name="sports">
+            <option>No</option><option>Yes</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <label>NCC Cadet?</label>
+          <select class="form-select" name="ncc">
+            <option>No</option><option>Yes</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- Parent Details -->
+    <div class="form-section">
+      <h5>Parent / Guardian Details</h5>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <label>Father Name</label>
+          <input type="text" class="form-control" name="father_name">
+        </div>
+        <div class="col-md-3">
+          <label>Occupation</label>
+          <input type="text" class="form-control" name="father_occupation">
+        </div>
+        <div class="col-md-3">
+          <label>Annual Income</label>
+          <input type="number" class="form-control" name="father_income">
+        </div>
+        <div class="col-md-6">
+          <label>Email</label>
+          <input type="email" class="form-control" name="father_email">
+        </div>
+        <div class="col-md-6">
+          <label>Mobile Number</label>
+          <input type="text" class="form-control" name="father_mobile">
+        </div>
+        <!-- Repeat for Mother/Guardian if needed -->
+      </div>
+    </div>
+
+    <!-- Address -->
+    <div class="form-section">
+      <h5>Address for Communication</h5>
+      <textarea class="form-control" name="address1" rows="3" placeholder="Line 1, Line 2, Line 3, City, PIN, State"></textarea>
+      <label class="form-check mt-2">
+        <input class="form-check-input" type="checkbox" name="same_address"> Same as communication address
+      </label>
+    </div>
+
+    <!-- Uploads -->
+    <div class="form-section">
+      <h5>Upload Documents</h5>
+      <div class="mb-3">
+        <label class="form-label">Recent Passport Size Photo (JPG only, < 1MB)</label>
+        <input type="file" class="form-control" name="photo" accept=".jpg,.jpeg">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Community Certificate (PDF only, < 1MB)</label>
+        <input type="file" class="form-control" name="community_cert" accept=".pdf">
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-success w-100">Submit Registration</button>
+  </form>
+</div>
+</body>
+</html>
