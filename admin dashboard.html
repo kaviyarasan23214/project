@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: url('/image/st.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+    }
+    .sidebar {
+      height: 100vh;
+      background-color: #0b2447;
+      color: white;
+      padding-top: 20px;
+      position: fixed;
+      width: 220px;
+    }
+    .sidebar a {
+      display: block;
+      padding: 12px 20px;
+      color: white;
+      text-decoration: none;
+      margin: 5px 0;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+    .sidebar a:hover, .sidebar a.active {
+      background-color: #19376d;
+    }
+    .content {
+      margin-left: 230px;
+      padding: 30px;
+    }
+    .card {
+      border-radius: 15px;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+    }
+    .table {
+      background: rgb(105, 3, 3);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .table th {
+      background-color: #0791e0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h4 class="text-center mb-4">Admin</h4>
+    <a href="#" class="active"><i class="fa fa-home me-2"></i>Dashboard</a>
+    <a href="#"><i class="fa fa-users me-2"></i>Students</a>
+    <a href="#"><i class="fa fa-bell me-2"></i>Notifications</a>
+    <a href="#"><i class="fa fa-sign-out-alt me-2"></i>Logout</a>
+  </div>
+
+  <!-- Main Content -->
+  <div class="content">
+    <h2 class="mb-4"><font="red">Welcome Dashboard</h2>
+
+    <!-- Stats Cards -->
+    <div class="row mb-4">
+      <div class="col-md-4">
+        <div class="card text-center p-3 bg-light">
+          <h3>35</h3>
+          <p>Students</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card text-center p-3" style="background:#d1f7d6;">
+          <h3>12</h3>
+          <p>New Notification</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card text-center p-3" style="background:#e6d7f7;">
+          <h3>60</h3>
+          <p>Notifications</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Student Table -->
+    <div class="card p-3">
+      <h5>Student Details</h5>
+      <table class="table table-striped mt-3">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Course</th>
+            <th>Gender</th>
+            <th>Community</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Arun</td>
+            <td>Math</td>
+            <td>Male</td>
+            <td>BC</td>
+          </tr>
+          <tr>
+            <td>Saranya</td>
+            <td>Physics</td>
+            <td>Female</td>
+            <td>MBC</td>
+          </tr>
+          <tr>
+            <td>Kavin</td>
+            <td>Chemistry</td>
+            <td>Male</td>
+            <td>MBC</td>
+          </tr>
+          <tr>
+            <td>Nithya</td>
+            <td>Commerce</td>
+            <td>Female</td>
+            <td>SC</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
